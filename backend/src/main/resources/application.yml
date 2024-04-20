@@ -1,0 +1,26 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: backend
+
+  datasource:
+    url: jdbc:postgresql://database-1.cbeia4weo48r.us-east-2.rds.amazonaws.com:5432/lite_prod
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  expiration: 3600
+  secret: QRfRTyAchR2LFDZUurC1TZCH0nN8xKvc8MyzmK8H2MoLbLkL
